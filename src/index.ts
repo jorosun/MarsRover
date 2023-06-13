@@ -1,3 +1,3 @@
-import { add } from './calc';
+import { createPlateau } from "./plateau";
 
-console.log(`2 plus 2 is ${add(2, 2)}`);
+console.log(`plateau size is ${createPlateau(5)}`);
