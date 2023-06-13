@@ -1,5 +1,9 @@
-import { createPlateau } from "./plateau";
+import { setGridSize } from "./plateau";
 {
-  let theGrid = createPlateau("55");
+  const sizeOfGrid = "55";
+  const startingPosition = "12N";
+  const instructions = "LMLMLMLMM";
+
+  let theGrid = setGridSize(sizeOfGrid);
   console.log(theGrid);
 }

@@ -1,5 +1,4 @@
-export function createPlateau(size: string): object {
-  // type plateauArray = [x: number, y: number];
+export function setGridSize(size: string): object {
   type grid = { x: number; y: number };
 
   let x = parseInt(size.charAt(0));
