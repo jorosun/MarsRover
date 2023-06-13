@@ -1,3 +1,5 @@
 import { createPlateau } from "./plateau";
-
-console.log(`plateau size is ${createPlateau(5)}`);
+{
+  let theGrid = createPlateau("55");
+  console.log(theGrid);
+}
