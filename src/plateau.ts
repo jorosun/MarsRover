@@ -1,5 +1,4 @@
 type POSITION = { x: number; y: number; direction: string };
-
 type GRID = { x: number; y: number };
 
 export function setGridSize(size: string): GRID {

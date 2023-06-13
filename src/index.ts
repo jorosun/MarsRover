@@ -1,4 +1,4 @@
-import { setGridSize, createPostion } from "./plateau";
+import { setGridSize, createPosition } from "./plateau";
 {
   const sizeOfGrid = "55";
   const startingPosition = "12N";
@@ -7,6 +7,6 @@ import { setGridSize, createPostion } from "./plateau";
   let theGrid = setGridSize(sizeOfGrid);
   console.log(theGrid);
 
-  const currentPosition = createPostion(startingPosition);
+  const currentPosition = createPosition(startingPosition);
   console.log(currentPosition);
 }

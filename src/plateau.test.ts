@@ -5,7 +5,7 @@ describe("test getGridSize function", () => {
   });
 });
 describe("test createPosition function", () => {
-  test(`should create an array [1,2,"N"]`, () => {
-    expect(setGridSize("12N")).toEqual({ x: 1, y: 2, direction: "N" });
+  test(`should create an object {1,2,"N"}`, () => {
+    expect(createPosition("12N")).toEqual({ x: 1, y: 2, direction: "N" });
   });
 });

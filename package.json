@@ -1,12 +1,12 @@
 {
-  "name": "ts-template-with-jest-tests",
+  "name": "marsrover",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "tsc  --project tsconfig.build.json",
-    "start": "nodemon src/index.ts",
-    "test": "jest"
+    "start": "nodemon plauteau.test",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
