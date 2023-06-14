@@ -1,11 +1,16 @@
 import { setGridSize, createPosition } from "../src/plateau";
 
 import { performInstructions } from "../src/rover";
+import {
+  getGridSize,
+  getInstructions,
+  getStartingPosition,
+} from "../src/userInterface";
 
 {
-  const sizeOfGrid = "55";
-  const startingPosition = "12N";
-  const instructionString = "LMLMLMLMM";
+  const sizeOfGrid = getGridSize();
+  const startingPosition = getStartingPosition();
+  const instructionString = getInstructions();
 
   const theGrid = setGridSize(sizeOfGrid);
   console.log(`Grid Size is `, theGrid);
