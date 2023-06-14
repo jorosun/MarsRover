@@ -7,7 +7,7 @@ import { performInstructions } from "../src/rover";
   const startingPosition = "12N";
   const instructionString = "LMLMLMLMM";
 
-  let theGrid = setGridSize(sizeOfGrid);
+  const theGrid = setGridSize(sizeOfGrid);
   console.log(theGrid);
 
   const startPosition = createPosition(startingPosition);

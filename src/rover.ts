@@ -9,16 +9,14 @@ export function performInstructions(
   for (let i = 0; i < instructions.length; i++) {
     switch (instructions.charAt(i)) {
       case "L": {
-        // rotate 90 degrees left
         position = rotateRover(position, "L");
       }
       case "R": {
-        // rotate 90 degrees right
         position = rotateRover(position, "R");
       }
       case "M": {
         // move rover forward one grid point
-        position = moveRover(position);
+        position = moveRover(position, grid);
       }
     }
   }
@@ -28,7 +26,6 @@ export function performInstructions(
 export function rotateRover(reference: POSITION, command: "L" | "R"): POSITION {
   switch (command) {
     case "L": {
-    
       switch (reference.direction) {
         case "N": {
           reference.direction = "W";
@@ -42,11 +39,11 @@ export function rotateRover(reference: POSITION, command: "L" | "R"): POSITION {
           reference.direction = "E";
           break;
         }
-        case "W":{
-            reference.direction = "S";
-            break;
-          }
-      };
+        case "W": {
+          reference.direction = "S";
+          break;
+        }
+      }
       break;
     }
     case "R": {
@@ -74,6 +71,39 @@ export function rotateRover(reference: POSITION, command: "L" | "R"): POSITION {
   return reference;
 }
 
-export function moveRover(reference: POSITION) {
+export function moveRover(reference: POSITION, gridSize: GRID): POSITION {
+  let maximumX = gridSize.x;
+  let maximumY = gridSize.y;
+
+  switch (reference.direction) {
+    case "N": {
+      if (reference.y === maximumY) {
+        break;
+      }
+      reference.y = reference.y + 1;
+      break;
+    }
+    case "E": {
+      if (reference.x === maximumX) {
+        break;
+      }
+      reference.x = reference.x + 1;
+      break;
+    }
+    case "S": {
+      if (reference.y === 0) {
+        break;
+      }
+      reference.y = reference.y - 1;
+      break;
+    }
+    case "W": {
+      if (reference.x === 0) {
+        break;
+      }
+      reference.x = reference.x - 1;
+      break;
+    }
+  }
   return reference;
 }
