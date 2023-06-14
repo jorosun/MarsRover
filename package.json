@@ -1,7 +1,7 @@
 {
   "name": "marsrover",
   "version": "1.0.0",
-  "description": "",
+  "description": "Mars Rover Assignment",
   "main": "./src/index.js",
   "scripts": {
     "build": "tsc  --project tsconfig.build.json",

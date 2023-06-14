@@ -1,4 +1,4 @@
-import { setGridSize, createPosition } from "./plateau";
+import { setGridSize, createPosition } from "../src/plateau";
 {
   const sizeOfGrid = "55";
   const startingPosition = "12N";
