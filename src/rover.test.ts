@@ -19,11 +19,74 @@ describe("test rotateRover function", () => {
 });
 
 describe("test moveRover function", () => {
-  test(`should move 1 position north`, () => {
+  test(`should move north if in position {0,0} facing north`, () => {
     expect(moveRover({ x: 0, y: 0, direction: "N" }, { x: 5, y: 5 })).toEqual({
       x: 0,
       y: 1,
       direction: "N",
+    });
+  });
+
+  test(`should move west if in position {0,0} facing west`, () => {
+    expect(moveRover({ x: 0, y: 0, direction: "W" }, { x: 5, y: 5 })).toEqual({
+      x: 0,
+      y: 0,
+      direction: "W",
+    });
+  });
+  test(`shouldn't move south if in position {0,0} facing south`, () => {
+    expect(moveRover({ x: 0, y: 0, direction: "S" }, { x: 5, y: 5 })).toEqual({
+      x: 0,
+      y: 0,
+      direction: "S",
+    });
+  });
+
+  test(`shouldn't move east if in position {5,0} facing east`, () => {
+    expect(moveRover({ x: 5, y: 0, direction: "E" }, { x: 5, y: 5 })).toEqual({
+      x: 5,
+      y: 0,
+      direction: "E",
+    });
+  });
+
+  test(`shouldn't move south if in position {3,0} facing south`, () => {
+    expect(moveRover({ x: 3, y: 0, direction: "S" }, { x: 5, y: 5 })).toEqual({
+      x: 3,
+      y: 0,
+      direction: "S",
+    });
+  });
+
+  test(`shouldn't move east if in position {5,5} facing east`, () => {
+    expect(moveRover({ x: 5, y: 5, direction: "E" }, { x: 5, y: 5 })).toEqual({
+      x: 5,
+      y: 5,
+      direction: "E",
+    });
+  });
+
+  test(`shouldn't move north if in position {5,5} facing north`, () => {
+    expect(moveRover({ x: 5, y: 5, direction: "N" }, { x: 5, y: 5 })).toEqual({
+      x: 5,
+      y: 5,
+      direction: "N",
+    });
+  });
+
+  test(`should move west if in position {5,5} facing west`, () => {
+    expect(moveRover({ x: 5, y: 5, direction: "W" }, { x: 5, y: 5 })).toEqual({
+      x: 4,
+      y: 5,
+      direction: "W",
+    });
+  });
+
+  test(`should move south if in position {5,5} facing south`, () => {
+    expect(moveRover({ x: 5, y: 5, direction: "S" }, { x: 5, y: 5 })).toEqual({
+      x: 5,
+      y: 4,
+      direction: "S",
     });
   });
 });
