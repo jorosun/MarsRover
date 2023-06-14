@@ -1,6 +1,9 @@
-# TypeScript project with Tests
+# Mars Rover Kata
 
-This repository can be used as a template for creating a TypeScript project using Jest for testing.
+This repository is the code I wrote for he Mars Rover Kata
+
+## Introduction
+
 
 ## Instructions
 
