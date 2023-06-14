@@ -4,9 +4,9 @@ This repository can be used as a template for creating a TypeScript project usin
 
 ## Instructions
 
-- Click the "Use this template" button
+- Click the "fork" button
 
-- Click "Create new repository"
+- Click the code button and copy the https path eg ""
 
 - Give your repository a name and click "Create repository from template"
 
@@ -15,4 +15,6 @@ This repository can be used as a template for creating a TypeScript project usin
 - Navigate to the directory on your command line
 
 - Run `npm install` followed by `npm test` to run the tests
+
+- Run 'npm start' to run the program MarsRover
 
