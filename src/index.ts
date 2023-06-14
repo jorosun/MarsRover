@@ -5,9 +5,11 @@ import {
   getGridSize,
   getInstructions,
   getStartingPosition,
-} from "../src/ui/userInterface";
+  welcomeToMarsRover,
+} from "../src/ui/user-interface";
 
 {
+  //WelcomeToMarsRover();
   const sizeOfGrid = getGridSize();
   const startingPosition = getStartingPosition();
   const instructionString = getInstructions();
