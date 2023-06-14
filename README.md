@@ -12,6 +12,8 @@ Rovers navigate the Plateau so they can use their special cameras 📷 and robot
 
 ### Assumptions 
  For the purpose of this task the assumption has been made that the Plateau is a square/rectangular grid,
+ At the moment my code is only working with hard coded values. Future versions will take input from the User Interface.
+ I have got the start/skelton of these functions in folder src/ui
 
 ## How the Mars Rover Works
 This section contains definitions for the Rover and Plateau, and the input/output
