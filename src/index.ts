@@ -8,15 +8,17 @@ import { performInstructions } from "../src/rover";
   const instructionString = "LMLMLMLMM";
 
   const theGrid = setGridSize(sizeOfGrid);
-  console.log(theGrid);
+  console.log(`Grid Size is `, theGrid);
 
   const startPosition = createPosition(startingPosition);
-  console.log(startPosition);
+  console.log(`Starting Position is :`, startPosition);
+
+  console.log(`Instructions are :`, instructionString);
 
   const endPosition = performInstructions(
     instructionString,
     startPosition,
     theGrid
   );
-  console.log(endPosition);
+  console.log(`End Position is:`, endPosition);
 }
