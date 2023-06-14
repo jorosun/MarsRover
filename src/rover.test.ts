@@ -89,6 +89,30 @@ describe("test moveRover function", () => {
       direction: "S",
     });
   });
+
+  test(`shouldn't move north if in position {0,5} facing north`, () => {
+    expect(moveRover({ x: 0, y: 5, direction: "N" }, { x: 5, y: 5 })).toEqual({
+      x: 0,
+      y: 5,
+      direction: "N",
+    });
+  });
+
+  test(`shouldn't move west if in position {0,5} facing west`, () => {
+    expect(moveRover({ x: 0, y: 5, direction: "W" }, { x: 5, y: 5 })).toEqual({
+      x: 0,
+      y: 5,
+      direction: "W",
+    });
+  });
+
+  test(`should move east if in position {0,3} facing east`, () => {
+    expect(moveRover({ x: 0, y: 3, direction: "E" }, { x: 5, y: 5 })).toEqual({
+      x: 1,
+      y: 3,
+      direction: "E",
+    });
+  });
 });
 
 // describe("test performInstructions function", () => {
