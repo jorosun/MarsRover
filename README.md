@@ -9,6 +9,9 @@ The surface of Mars is represented by a Plateau.
 Rovers navigate the Plateau so they can use their special cameras 📷 and robot arms
 🦾 to collect samples back to Planet Earth 🌏
 
+### Assumptions 
+ For the purpose of this task the assumption has been made that the Plateau is a square/rectangular grid,
+
 ## Instructions
 
 - Click the "fork" button
