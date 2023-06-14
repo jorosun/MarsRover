@@ -1,8 +1,7 @@
-import {
-  setGridSize,
-  createPosition,
-  performInstructions,
-} from "../src/plateau";
+import { setGridSize, createPosition } from "../src/plateau";
+
+import { performInstructions } from "../src/rover";
+
 {
   const sizeOfGrid = "55";
   const startingPosition = "12N";
