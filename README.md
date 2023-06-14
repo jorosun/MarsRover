@@ -1,9 +1,13 @@
 # Mars Rover Kata
 
-This repository is the code I wrote for he Mars Rover Kata
+This repository is the code I wrote in TypeScript for he Mars Rover Kata, I took a TDD development approach.
 
 ## Introduction
+The Kata asks you to create a program to move rovers around the surface of Mars!
 
+The surface of Mars is represented by a Plateau.
+Rovers navigate the Plateau so they can use their special cameras 📷 and robot arms
+🦾 to collect samples back to Planet Earth 🌏
 
 ## Instructions
 
