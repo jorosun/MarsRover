@@ -15,7 +15,6 @@ export function performInstructions(
         position = rotateRover(position, "R");
       }
       case "M": {
-        // move rover forward one grid point
         position = moveRover(position, grid);
       }
     }
