@@ -5,7 +5,7 @@ import {
   getGridSize,
   getInstructions,
   getStartingPosition,
-} from "../src/userInterface";
+} from "../src/ui/userInterface";
 
 {
   const sizeOfGrid = getGridSize();
