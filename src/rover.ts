@@ -6,19 +6,25 @@ export function performInstructions(
   grid: GRID
 ): POSITION {
   let position = start;
+  console.log("start position:", position);
   for (let i = 0; i < instructions.length; i++) {
     switch (instructions.charAt(i)) {
       case "L": {
         position = rotateRover(position, "L");
+        break;
       }
       case "R": {
         position = rotateRover(position, "R");
+        break;
       }
       case "M": {
         position = moveRover(position, grid);
+        break;
       }
     }
+    console.log("position:", position);
   }
+  console.log("final position:", position);
   return position;
 }
 

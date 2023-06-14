@@ -116,13 +116,19 @@ describe("test moveRover function", () => {
 });
 
 describe("test performInstructions function", () => {
-  test(`should return end position as object {1,3,"N"}`, () => {
+  test(`should return end position as object {2,3,"W"} if starting at {3,3,"N"} with instruction "LM"`, () => {
+    expect(
+      performInstructions("LM", { x: 3, y: 3, direction: "N" }, { x: 5, y: 5 })
+    ).toEqual({ x: 2, y: 3, direction: "W" });
+  });
+
+  test(`should return end position as object {2,2,"S"} if starting at {3,3,"N"} with instruction "LMLM"`, () => {
     expect(
       performInstructions(
-        "LMLMLMLMM",
-        { x: 1, y: 2, direction: "N" },
+        "LMLM",
+        { x: 3, y: 3, direction: "N" },
         { x: 5, y: 5 }
       )
-    ).toEqual({ x: 1, y: 3, direction: "N" });
+    ).toEqual({ x: 2, y: 2, direction: "S" });
   });
 });
