@@ -131,4 +131,24 @@ describe("test performInstructions function", () => {
       )
     ).toEqual({ x: 2, y: 2, direction: "S" });
   });
+
+  test(`should return end position as object {1,3,"N"} if starting at {1,2,"N"} with instruction "LMLMLMLMLMM"`, () => {
+    expect(
+      performInstructions(
+        "LMLMLMLMM",
+        { x: 1, y: 2, direction: "N" },
+        { x: 5, y: 5 }
+      )
+    ).toEqual({ x: 1, y: 3, direction: "N" });
+  });
+
+  test(`should return end position as object {5,1,"E"} if starting at {3,3,"E"} with instruction "MMRMMRMRRM"`, () => {
+    expect(
+      performInstructions(
+        "MMRMMRMRRM",
+        { x: 3, y: 3, direction: "E" },
+        { x: 5, y: 5 }
+      )
+    ).toEqual({ x: 5, y: 1, direction: "E" });
+  });
 });
