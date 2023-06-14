@@ -23,11 +23,3 @@ export function createPosition(pos: string): POSITION {
   let currentPosition: POSITION = { x, y, direction };
   return currentPosition;
 }
-
-export function performInstructions(
-  pos: string,
-  start: POSITION,
-  grid: GRID
-): GRID {
-  return grid;
-}

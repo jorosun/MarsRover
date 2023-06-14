@@ -26,35 +26,49 @@ export function performInstructions(
 }
 
 export function rotateRover(reference: POSITION, command: "L" | "R"): POSITION {
-  if (command === "L") {
-    switch (reference.direction) {
-      case "N": {
-        reference.direction = "W";
-      }
-      case "E": {
-        reference.direction = "N";
-      }
-      case "S": {
-        reference.direction = "E";
-      }
-      case "W": {
-        reference.direction = "S";
-      }
+  switch (command) {
+    case "L": {
+    
+      switch (reference.direction) {
+        case "N": {
+          reference.direction = "W";
+          break;
+        }
+        case "E": {
+          reference.direction = "N";
+          break;
+        }
+        case "S": {
+          reference.direction = "E";
+          break;
+        }
+        case "W":{
+            reference.direction = "S";
+            break;
+          }
+      };
+      break;
     }
-  } else {
-    switch (reference.direction) {
-      case "N": {
-        reference.direction = "E";
+    case "R": {
+      switch (reference.direction) {
+        case "N": {
+          reference.direction = "E";
+          break;
+        }
+        case "E": {
+          reference.direction = "S";
+          break;
+        }
+        case "S": {
+          reference.direction = "W";
+          break;
+        }
+        case "W": {
+          reference.direction = "N";
+          break;
+        }
       }
-      case "E": {
-        reference.direction = "S";
-      }
-      case "S": {
-        reference.direction = "W";
-      }
-      case "W": {
-        reference.direction = "N";
-      }
+      break;
     }
   }
   return reference;
