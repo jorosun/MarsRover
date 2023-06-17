@@ -1,12 +1,13 @@
-export interface POSITION {
-  x: number;
-  y: number;
-  direction: string;
-}
-export interface GRID {
-  x: number;
-  y: number;
-}
+import { GRID, POSITION } from "./types";
+// export interface POSITION {
+//   x: number;
+//   y: number;
+//   direction: string;
+// }
+// export interface GRID {
+//   x: number;
+//   y: number;
+// }
 
 export function setGridSize(size: string): GRID {
   let x = parseInt(size.charAt(0));

@@ -1,15 +1,10 @@
-import { clear, print, askQuestion, displayText } from "./console";
+import { clear, print, askQuestion } from "./console";
 
 export function welcomeToMarsRover(): void {
   clear(false);
   print("----------------------------");
   print("| Welcome to the Mars Rover|");
   print("----------------------------");
-}
-
-function failImmediately() {
-  clear(false);
-  return endMarsRover();
 }
 
 export function endMarsRover(): void {

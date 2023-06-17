@@ -17,10 +17,6 @@ export function clear(addTopBorder: boolean): void {
   }
 }
 
-export const displayText = (message: string): void => {
-  print(message);
-};
-
 export function askQuestion(question: string, callback: (arg: string) => void) {
   reader.question(`❓ ${question} 👉 `, callback);
 }

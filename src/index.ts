@@ -1,4 +1,4 @@
-import { clear, print, askQuestion, displayText } from "./ui/console";
+import { clear, print, askQuestion } from "./ui/console";
 import { setGridSize, createPosition } from "../src/plateau";
 import { performInstructions } from "../src/rover";
 import {
