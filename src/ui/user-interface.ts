@@ -1,12 +1,12 @@
-import { clear, print, askQuestion } from "./console";
+import { clear, print, askQuestion, displayText } from "./console";
 
 export function welcomeToMarsRover(): void {
   clear(false);
   print("----------------------------");
   print("| Welcome to the Mars Rover|");
   print("----------------------------");
-  askQuestion(`What size is the plateau? `, getGridSize);
 }
+
 function failImmediately() {
   clear(false);
   return endMarsRover();
@@ -18,13 +18,19 @@ export function endMarsRover(): void {
   askQuestion("Press ENTER to restart! ", welcomeToMarsRover);
 }
 
-export function getGridSize(): string {
-  return "55";
+export function getGridSize(size: string): string | undefined {
+  if (size && size.length > 0) {
+    return size;
+  }
 }
 
-export function getStartingPosition(): string {
-  return "12N";
+export function getStartingPosition(start: string): string | undefined {
+  if (start && start.length > 0) {
+    return start;
+  }
 }
-export function getInstructions(): string {
-  return "LMLMLMLMM";
+export function getInstructions(instruct: string): string | undefined {
+  if (instruct && instruct.length > 0) {
+    return instruct;
+  }
 }
