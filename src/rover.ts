@@ -1,10 +1,10 @@
-import { POSITION, GRID } from "./plateau";
+import { Position, Grid, Rotation } from "./types";
 
 export function performInstructions(
   instructions: string,
-  start: POSITION,
-  grid: GRID
-): POSITION {
+  start: Position,
+  grid: Grid
+): Position {
   let position = start;
   for (let i = 0; i < instructions.length; i++) {
     switch (instructions.charAt(i)) {
@@ -25,7 +25,7 @@ export function performInstructions(
   return position;
 }
 
-export function rotateRover(reference: POSITION, command: "L" | "R"): POSITION {
+export function rotateRover(reference: Position, command: Rotation): Position {
   switch (command) {
     case "L": {
       switch (reference.direction) {
@@ -73,7 +73,7 @@ export function rotateRover(reference: POSITION, command: "L" | "R"): POSITION {
   return reference;
 }
 
-export function moveRover(reference: POSITION, gridSize: GRID): POSITION {
+export function moveRover(reference: Position, gridSize: Grid): Position {
   let maximumX = gridSize.x;
   let maximumY = gridSize.y;
 
